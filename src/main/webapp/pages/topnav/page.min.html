@@ -30,13 +30,16 @@ var _topnavPage_Variables_ ={};
 </script>
 <script id="topnav.html" type="text/ng-template">
 <wm-partial data-ng-controller="topnavPageController" name="topnav" type="topnav">
-    <wm-navbar>
+    <wm-navbar name="navbar1">
         <wm-nav name="leftTopLinks" type="navbar" class="navbar-left">
             <wm-nav-item name="list_home">
                 <wm-anchor caption="Home" name="homeLink" iconclass="glyphicon glyphicon-home" on-click="goToPage_Main"></wm-anchor>
             </wm-nav-item>
-            <wm-nav-item name="list_services">
-                <wm-anchor caption="Order" name="orderLink" iconclass="glyphicon glyphicon-list"></wm-anchor>
+            <wm-nav-item name="list_map">
+                <wm-anchor caption="Map" name="mapLink" iconclass="glyphicon glyphicon-map-marker" on-click="goToPage_Map"></wm-anchor>
+            </wm-nav-item>
+            <wm-nav-item name="list_report">
+                <wm-anchor caption="Report" name="reportLink" iconclass="glyphicon glyphicon-stats" on-click="goToPage_Reports"></wm-anchor>
             </wm-nav-item>
         </wm-nav>
         <wm-nav name="rightTopLinks" type="navbar" class="navbar-right">
