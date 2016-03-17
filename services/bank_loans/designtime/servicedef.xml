@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="bank_loans" type="RestService" springFile="bank_loans.spring.xml">
+    <operation name="invoke">
+        <parameter name="status" typeRef="java.lang.String" isList="false"/>
+        <return isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="bank_loans.asset" name="asset" supportsQuickData="false">
+            <element name="model" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="color" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="vin" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="year" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="make" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="bank_loans.bororrwer" name="bororrwer" supportsQuickData="false">
+            <element name="lastName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="postalCode" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="state" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="address1" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="address2" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="firstName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="country" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="city" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="bank_loans.RootResponse" name="RootResponse" supportsQuickData="false">
+            <element name="RootResponseROOT" typeRef="bank_loans.RootResponseROOTEntryItem" isList="true" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="bank_loans.co-bororrwer" name="co-bororrwer" supportsQuickData="false"/>
+        <dataobject javaType="bank_loans.RootResponseROOTEntryItem" name="RootResponseROOTEntryItem" supportsQuickData="false">
+            <element name="id" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="termMonths" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="asset" typeRef="bank_loans.asset" isList="false" allowNull="false"/>
+            <element name="status" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="delinquentDate" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="currentLoanValue" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="interestRate" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="originiationDate" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="originalLoanValue" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="co-bororrwer" typeRef="bank_loans.co-bororrwer" isList="false" allowNull="false"/>
+            <element name="bororrwer" typeRef="bank_loans.bororrwer" isList="false" allowNull="false"/>
+        </dataobject>
+    </dataobjects>
+</service>

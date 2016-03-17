@@ -23,6 +23,13 @@ Application.$controller("MainPageController", ["$scope", function ($scope) {
     };
 
 }]);
+
+Application.$controller("grid1Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
 </script>
 <script id="Main.variables.json">
 var _MainPage_Variables_ ={};
@@ -35,6 +42,20 @@ var _MainPage_Variables_ ={};
         <!--<wm-left-panel columnwidth="2" name="leftpanel" content="leftnav"></wm-left-panel>-->
         <wm-page-content columnwidth="12" paddingleft="15" paddingright="15" name="mainContent">
             <wm-message name="message1" caption="Welcome Capital One!"></wm-message>
+            <wm-calendar name="calendar1"></wm-calendar>
+            <wm-grid readonlygrid="true" dataset="bind:Variables.Bank_loansInvoke.dataSet" name="grid1">
+                <wm-grid-column binding="termMonths" caption="Term Months" type="string" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                <wm-grid-column binding="asset.model" caption="Asset Model" type="string" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                <wm-grid-column binding="asset.color" caption="Asset Color" type="string" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                <wm-grid-column binding="asset.vin" caption="Asset Vin" type="string" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                <wm-grid-column binding="asset.year" caption="Asset Year" type="string" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                <wm-grid-column binding="asset.make" caption="Asset Make" type="string" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                <wm-grid-column binding="status" caption="Status" type="string" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                <wm-grid-column binding="delinquentDate" caption="Delinquent Date" type="string" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                <wm-grid-column binding="currentLoanValue" caption="Current Loan Value" type="string" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                <wm-grid-column binding="bororrwer.lastName" caption="Bororrwer Last Name" type="string" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                <wm-grid-column binding="bororrwer.firstName" caption="Bororrwer First Name" type="string" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+            </wm-grid>
         </wm-page-content>
         <!--<wm-right-panel columnwidth="2" name="rightpanel" content="rightnav"></wm-right-panel>--></wm-content>
     <wm-footer name="footer" content="footer"></wm-footer>

@@ -2,9 +2,6 @@
   "name" : "Common",
   "type" : "PARTIAL"
 }, {
-  "name" : "Login",
-  "type" : "PAGE"
-}, {
   "name" : "Main",
   "type" : "PAGE"
 }, {
