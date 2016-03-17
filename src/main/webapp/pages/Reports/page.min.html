@@ -33,7 +33,7 @@ var _ReportsPage_Variables_ ={};
     <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
     <wm-content name="content1">
         <wm-page-content columnwidth="12" name="page_content1">
-            <wm-chart type="Bubble" name="chart3" theme="Terrestrial" dataset="bind:Variables.Bank_loansInvoke.dataSet" xaxisdatakey="termMonths" yaxisdatakey="currentLoanValue,originalLoanValue" bubblesize="interestRate"></wm-chart>
+            <wm-chart type="Bubble" name="chart3" theme="Terrestrial" dataset="bind:Variables.Bank_loansInvoke.dataSet" bubblesize="asset.make" xaxisdatakey="asset.year" yaxisdatakey="originalLoanValue"></wm-chart>
             <wm-chart type="Pie" name="chart4" theme="Azure" dataset="bind:Variables.Bank_loansInvoke.dataSet" xaxisdatakey="bororrwer.country" yaxisdatakey="interestRate"></wm-chart>
         </wm-page-content>
     </wm-content>
