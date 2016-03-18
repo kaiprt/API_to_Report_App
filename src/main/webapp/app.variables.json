@@ -16,7 +16,7 @@
     "operation" : "toast"
   },
   "Bank_loansInvoke" : {
-    "_id" : "wm-Bank_loansInvoke-wm.ServiceVariable-1458225875107",
+    "_id" : "wm-Bank_loansInvoke-wm.ServiceVariable-1458309203590",
     "name" : "Bank_loansInvoke",
     "owner" : "App",
     "category" : "wm.ServiceVariable",
@@ -50,8 +50,7 @@
     "designMaxResults" : 10,
     "startUpdate" : true,
     "autoUpdate" : true,
-    "onError" : "No Event",
-    "inFlightBehavior" : "executeAll",
+    "inFlightBehavior" : "executeLast",
     "transformationRequired" : false,
     "saveInPhonegap" : false,
     "isDefault" : true,

@@ -32,7 +32,7 @@ Application.$controller("grid1Controller", ["$scope",
 ]);
 </script>
 <script id="Main.variables.json">
-var _MainPage_Variables_ ={};
+var _MainPage_Variables_ ={ }
 </script>
 <script id="Main.html" type="text/ng-template">
 <wm-page data-ng-controller="MainPageController" name="mainpage" pagetitle="Main">
@@ -41,9 +41,8 @@ var _MainPage_Variables_ ={};
     <wm-content name="content">
         <!--<wm-left-panel columnwidth="2" name="leftpanel" content="leftnav"></wm-left-panel>-->
         <wm-page-content columnwidth="12" paddingleft="15" paddingright="15" name="mainContent">
-            <wm-message name="message1" caption="Welcome Capital One!"></wm-message>
-            <wm-calendar name="calendar1"></wm-calendar>
-            <wm-grid readonlygrid="true" dataset="bind:Variables.Bank_loansInvoke.dataSet" name="grid1">
+            <wm-message name="message1" caption="Welcome Everyone!"></wm-message>
+            <wm-grid readonlygrid="true" dataset="bind:Variables.Bank_loansInvoke.dataSet" name="grid1" height="400px" showrowindex="false" title="Car Loan Database" show="true" pagesize="10">
                 <wm-grid-column binding="termMonths" caption="Term Months" type="string" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
                 <wm-grid-column binding="asset.model" caption="Asset Model" type="string" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
                 <wm-grid-column binding="asset.color" caption="Asset Color" type="string" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>

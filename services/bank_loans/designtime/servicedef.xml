@@ -12,8 +12,13 @@
             <element name="year" typeRef="java.lang.String" isList="false" allowNull="false"/>
             <element name="make" typeRef="java.lang.String" isList="false" allowNull="false"/>
         </dataobject>
+        <dataobject javaType="bank_loans.coords" name="coords" supportsQuickData="false">
+            <element name="lng" typeRef="java.lang.Double" isList="false" allowNull="false"/>
+            <element name="lat" typeRef="java.lang.Double" isList="false" allowNull="false"/>
+        </dataobject>
         <dataobject javaType="bank_loans.bororrwer" name="bororrwer" supportsQuickData="false">
             <element name="lastName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="coords" typeRef="bank_loans.coords" isList="false" allowNull="false"/>
             <element name="postalCode" typeRef="java.lang.String" isList="false" allowNull="false"/>
             <element name="state" typeRef="java.lang.String" isList="false" allowNull="false"/>
             <element name="address1" typeRef="java.lang.String" isList="false" allowNull="false"/>
@@ -27,7 +32,7 @@
         </dataobject>
         <dataobject javaType="bank_loans.co-bororrwer" name="co-bororrwer" supportsQuickData="false"/>
         <dataobject javaType="bank_loans.RootResponseROOTEntryItem" name="RootResponseROOTEntryItem" supportsQuickData="false">
-            <element name="id" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
             <element name="termMonths" typeRef="java.lang.String" isList="false" allowNull="false"/>
             <element name="asset" typeRef="bank_loans.asset" isList="false" allowNull="false"/>
             <element name="status" typeRef="java.lang.String" isList="false" allowNull="false"/>
