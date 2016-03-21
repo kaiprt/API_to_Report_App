@@ -35,6 +35,7 @@ var _ReportsPage_Variables_ ={ }
         <wm-page-content columnwidth="12" name="page_content1">
             <wm-chart type="Pie" name="chart4" theme="Azure" dataset="bind:Variables.Bank_Loans_AggregateInvoke.dataSet['by-state']" labeltype="percent" xaxisdatakey="state" yaxisdatakey="count"></wm-chart>
             <wm-chart type="Line" name="chart3" theme="Terrestrial" dataset="bind:Variables.Bank_Loans_AggregateInvoke.dataSet['month-trend']" yaxisdatakey="total" xaxisdatakey="month"></wm-chart>
+            <wm-chart type="Column" name="chart4_1" theme="Terrestrial" dataset="bind:Variables.Bank_Loans_AggregateInvoke.dataSet['by-state']" xaxisdatakey="state" yaxisdatakey="total"></wm-chart>
         </wm-page-content>
     </wm-content>
     <wm-footer content="footer" name="footer1"></wm-footer>
