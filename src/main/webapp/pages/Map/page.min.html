@@ -33,7 +33,7 @@ var _MapPage_Variables_ ={ }
     <wm-top-nav name="topnav" content="topnav"></wm-top-nav>
     <wm-content name="content1">
         <wm-page-content columnwidth="12" name="page_content1">
-            <wm-prefab prefabname="googlemaps" name="googlemaps2" animation="bounce" locations="bind:Variables.Bank_loansInvoke.dataSet[$i].bororrwer.coords"></wm-prefab>
+            <wm-prefab prefabname="googlemaps" name="googlemaps2" animation="bounce" locations="bind:Variables.Bank_loansInvoke.dataSet" lat="bororrwer.coords.lat" lng="bororrwer.coords.lng"></wm-prefab>
         </wm-page-content>
     </wm-content>
 </wm-page>
