@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="Bank_Loans_Aggregate" type="RestService" springFile="Bank_Loans_Aggregate.spring.xml">
+    <operation name="invoke">
+        <return typeRef="Bank_Loans_Aggregate.RootResponse" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="Bank_Loans_Aggregate.month-trendEntryItem" name="month-trendEntryItem" supportsQuickData="false">
+            <element name="total" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="count" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="month" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="Bank_Loans_Aggregate.RootResponse" name="RootResponse" supportsQuickData="false">
+            <element name="by-state" typeRef="Bank_Loans_Aggregate.by-stateEntryItem" isList="true" allowNull="false"/>
+            <element name="range" typeRef="Bank_Loans_Aggregate.rangeEntryItem" isList="true" allowNull="false"/>
+            <element name="month-trend" typeRef="Bank_Loans_Aggregate.month-trendEntryItem" isList="true" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="Bank_Loans_Aggregate.rangeEntryItem" name="rangeEntryItem" supportsQuickData="false">
+            <element name="total" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="count" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="days" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="Bank_Loans_Aggregate.by-stateEntryItem" name="by-stateEntryItem" supportsQuickData="false">
+            <element name="total" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="count" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="state" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+    </dataobjects>
+</service>

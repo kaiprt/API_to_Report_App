@@ -15,31 +15,57 @@
     } ],
     "operation" : "toast"
   },
+  "Bank_Loans_AggregateInvoke" : {
+    "_id" : "wm-Bank_Loans_AggregateInvoke-wm.ServiceVariable-1458569818753",
+    "name" : "Bank_Loans_AggregateInvoke",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "Bank_Loans_Aggregate.RootResponse",
+    "service" : "Bank_Loans_Aggregate",
+    "operation" : "invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/Bank_Loans_Aggregate/invoke",
+      "httpMethod" : "get",
+      "name" : "invoke",
+      "consumes" : [ "text/xml" ],
+      "parameters" : [ ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "RestServiceVirtual",
+    "spinnerContext" : "page"
+  },
   "Bank_loansInvoke" : {
     "_id" : "wm-Bank_loansInvoke-wm.ServiceVariable-1458309203590",
     "name" : "Bank_loansInvoke",
     "owner" : "App",
     "category" : "wm.ServiceVariable",
-    "dataBinding" : [ {
-      "target" : "status",
-      "value" : "all",
-      "type" : "string"
-    } ],
-    "type" : "bank_loans.RootResponseROOTEntryItem",
+    "dataBinding" : [ ],
+    "type" : "Bank_Loans_Aggregate.RootResponse",
     "service" : "bank_loans",
     "operation" : "invoke",
     "operationType" : "get",
     "serviceType" : "RestService",
     "wmServiceOperationInfo" : {
-      "relativePath" : "/bank_loans/invoke",
+      "relativePath" : "/Bank_Loans_Aggregate/invoke",
       "httpMethod" : "get",
       "name" : "invoke",
       "consumes" : [ "text/xml" ],
-      "parameters" : [ {
-        "name" : "status",
-        "parameterType" : "query",
-        "type" : "string"
-      } ]
+      "parameters" : [ ]
     },
     "dataSet" : {
       "dataValue" : ""

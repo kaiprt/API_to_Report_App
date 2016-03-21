@@ -33,8 +33,8 @@ var _ReportsPage_Variables_ ={ }
     <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
     <wm-content name="content1">
         <wm-page-content columnwidth="12" name="page_content1">
-            <wm-chart type="Bubble" name="chart3" theme="Terrestrial" dataset="bind:Variables.Bank_loansInvoke.dataSet" bubblesize="interestRate" xaxisdatakey="termMonths" yaxisdatakey="originalLoanValue" showlegend="false" showxdistance="true"></wm-chart>
-            <wm-chart type="Pie" name="chart4" theme="Azure" dataset="bind:Variables.Bank_loansInvoke.dataSet" yaxisdatakey="originalLoanValue" xaxisdatakey="bororrwer.state" labeltype="percent"></wm-chart>
+            <wm-chart type="Pie" name="chart4" theme="Azure" dataset="bind:Variables.Bank_Loans_AggregateInvoke.dataSet['by-state']" labeltype="percent" xaxisdatakey="state" yaxisdatakey="count"></wm-chart>
+            <wm-chart type="Line" name="chart3" theme="Terrestrial" dataset="bind:Variables.Bank_Loans_AggregateInvoke.dataSet['month-trend']" yaxisdatakey="total" xaxisdatakey="month"></wm-chart>
         </wm-page-content>
     </wm-content>
     <wm-footer content="footer" name="footer1"></wm-footer>
