@@ -7,6 +7,7 @@
         <dataobject javaType="Bank_Loans_Aggregate.month-trendEntryItem" name="month-trendEntryItem" supportsQuickData="false">
             <element name="total" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
             <element name="count" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="name" typeRef="java.lang.String" isList="false" allowNull="false"/>
             <element name="month" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
         </dataobject>
         <dataobject javaType="Bank_Loans_Aggregate.RootResponse" name="RootResponse" supportsQuickData="false">

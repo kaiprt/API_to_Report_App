@@ -54,18 +54,26 @@
     "name" : "Bank_loansInvoke",
     "owner" : "App",
     "category" : "wm.ServiceVariable",
-    "dataBinding" : [ ],
+    "dataBinding" : [ {
+      "target" : "status",
+      "value" : "all",
+      "type" : "java.lang.String"
+    } ],
     "type" : "Bank_Loans_Aggregate.RootResponse",
     "service" : "bank_loans",
     "operation" : "invoke",
     "operationType" : "get",
     "serviceType" : "RestService",
     "wmServiceOperationInfo" : {
-      "relativePath" : "/Bank_Loans_Aggregate/invoke",
+      "relativePath" : "/bank_loans/invoke",
       "httpMethod" : "get",
       "name" : "invoke",
       "consumes" : [ "text/xml" ],
-      "parameters" : [ ]
+      "parameters" : [ {
+        "name" : "status",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
     },
     "dataSet" : {
       "dataValue" : ""
